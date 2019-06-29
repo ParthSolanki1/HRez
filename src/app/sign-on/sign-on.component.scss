@@ -1,0 +1,119 @@
+@import '../../styles.scss';
+
+.sign-on {
+    &-banner{
+        background-image: url("../../assets/Sign-on/skyscraper.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+    }
+
+    &-message {
+        color: $tertiary-color;
+        font-size: 40px;
+        padding-left: calc(10% + 15px);
+        padding-top: 3%;
+        font-family: 'Ubuntu';
+    }
+
+    &-message p {
+        margin: 0;
+
+        &:last-child {
+            padding-top: 5px;
+        }
+    }
+
+    &-card {
+        width: 30%;
+        height: 475px;
+        background-color: $secondary-color;
+        margin-left: auto;
+        margin-top: 3%;
+        margin-right: calc(10% - 15px);
+        box-shadow: 8px 10px 40px black;
+    }
+
+    &-form {
+        padding: 8% 15%;
+
+        & h1 {
+            margin: 0;
+            font-family: 'Ubuntu';
+            font-size: 50px;
+            font-weight: 400;
+            color: $primary-text-color;
+            padding-bottom: 8%;
+        }
+
+        & div{
+            padding-bottom: 20px;
+
+            & label{
+                font-size: 20px;
+                font-family: 'Ubuntu';
+                color: $primary-text-color;
+                padding-bottom: 5px;
+                display: inline-block;
+            }
+
+            & input[type="text"], input[type="password"]{
+                display: block;
+                margin-bottom: 15px;
+                border-left: 0px;
+                border-top: 0px;
+                border-right: 0px;
+                width: 85%;
+                outline: none;
+                font-size: 17px;
+                border-bottom: 2px solid $input-color;
+                padding-top: 5px;
+                transition: 0.3s;
+
+                &:focus {
+                    border-bottom-color: $hover-color;
+                }
+            }
+        }
+
+        & button {
+            border: 1px solid $input-color;
+            padding: 15px;
+            cursor: pointer;
+            background-color: $tertiary-color;
+            color: $secondary-color;
+            font-family: 'Ubuntu';
+            border-radius: 5px;
+            transition: 0.4s;
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+
+        & a {
+            margin-left: calc(80% - 128.1px);
+            display: inline-block;
+            font-family: 'Ubuntu';
+            text-decoration: none;
+            color: $tertiary-color;
+            transition: 0.3s;
+
+            &:hover {
+                color: $hover-color;
+            }
+        }
+    }
+
+    &-testement {
+        font-family: 'Ubuntu';
+        font-size: 50px;
+        font-weight: 400;
+        color: $tertiary-color;
+        padding-bottom: 8%;
+        text-align: center;
+        margin-top: 3%;
+    }
+}

@@ -1,0 +1,79 @@
+@import '../../styles.scss';
+
+.navbar {
+    &-container {
+        width: 100%;
+        background-color: $secondary-color;
+        margin: 0;
+        padding: 20px 15px;
+        display: flex;
+        align-items: center;
+        border-bottom: 8px solid $tertiary-color;
+    }
+
+    &-logo {
+        margin-left: 10%;
+        
+        & img {
+            width: 110px;
+        }
+    }
+    
+    &-item {
+        display: inline-block;
+    }
+
+    &-item a{
+        display: block;
+        padding: 0px 39.225px;
+        text-decoration: none;
+        color: $primary-text-color;
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.4s;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    &-items {
+        margin: 0;
+        list-style: none;
+        margin-left: auto;
+        margin-right: calc(10% - 39.225px);
+    }
+
+    @include respond-to($size:1200px){
+        &-item a {
+            font-size: 16px;
+            padding: 0px 25px;
+        }
+
+        &-items {
+            margin-right: calc(10% - 25px);
+        }
+
+        &-logo img {
+            width: 92px;
+        }
+    }
+
+    @include respond-to($size: 500px){
+        &-item a {
+            padding-left: 0;
+        }
+    }
+
+    @include respond-to($size: 450px){
+        &-item a {
+            font-size: 14px;
+        }
+
+        &-logo img {
+            width: 85px;
+        }
+    }
+
+}

@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/fonts.scss';
+
+$primary-color: rgb(199, 198, 198);
+$secondary-color: #fff;
+$tertiary-color: #700812;
+$hover-color: #b81324;
+$primary-text-color: rgb(70, 64, 64);
+$input-color: rgb(182, 181, 181);
+
+@mixin respond-to($size: null, $dir: max, $size-from: null, $size-to: null) {
+    @if ($size-from and $size-to){
+        @media only screen and (min-width: ($size-from + px)) and (max-width: ($size-to + px)){
+            @content;
+        }
+    } @else if ($size and $dir){
+        @media only screen and (#{$dir + -width}: $size){
+            @content;
+        }
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+}

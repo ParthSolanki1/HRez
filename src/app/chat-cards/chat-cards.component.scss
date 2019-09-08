@@ -1,0 +1,40 @@
+@import "../../styles.scss";
+
+.chat {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: $secondary-color;
+    padding: 30px;
+    
+    h1 {
+        font-family: 'Ubuntu';
+        font-weight: 350;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-family: 'Ubuntu';
+        font-weight: 300;
+        margin: 0;
+    }
+
+    button {
+        padding: 20px;
+        margin-top: 1%;
+        font-family: 'Ubuntu';
+        font-size: 15px;
+        border: 1px solid $input-color;
+        background-color: $tertiary-color;
+        color: $secondary-color;
+        border-radius: 5px;
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}

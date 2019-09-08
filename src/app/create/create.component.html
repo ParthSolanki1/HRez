@@ -1,0 +1,35 @@
+<app-navbar [show]="true"></app-navbar>
+<div class="create">
+  <a routerLink="/dashboard">Back to Dashboard</a>
+  <h1>Create a Team</h1>
+  <p>Create a team of upto 5 people by filling out the form below</p>
+  <div class="create-form">
+    <div class="create-form-entry">
+      <label for="">Enter a team name:&nbsp;</label>
+      <label for="" class="incorrect" *ngIf="emptyError[0]">Cannot leave field empty</label>
+      <input type="text" [(ngModel)]="team">
+    </div>
+    <div class="create-form-entry">
+        <label for="">Team Member 1: &nbsp;</label>
+        <label for="" class="incorrect" *ngIf="userNotFound[0]">Username does not exist</label>
+        <label for="" class="incorrect" *ngIf="allEmpty">Must have atleast 1 team member</label>
+        <input type="text" [(ngModel)]="user1">
+    </div>
+    <div class="create-form-entry">
+        <label for="">Team Member 2: &nbsp;</label>
+        <label for="" class="incorrect" *ngIf="userNotFound[1]">Username does not exist</label>
+        <input type="text" [(ngModel)]="user2">
+    </div>
+    <div class="create-form-entry">
+        <label for="">Team Member 3: &nbsp;</label>
+        <label for="" class="incorrect" *ngIf="userNotFound[2]">Username does not exist</label>
+        <input type="text" [(ngModel)]="user3">
+    </div>
+    <div class="create-form-entry">
+        <label for="">Team Member 4: &nbsp;</label>
+        <label for="" class="incorrect" *ngIf="userNotFound[3]">Username does not exist</label>
+        <input type="text" [(ngModel)]="user4">
+    </div>
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+</div>

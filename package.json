@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json --open | nodemon node/server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,7 +20,14 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "nodemailer": "^6.3.0",
     "rxjs": "~6.3.3",
+    "sendmail": "^1.6.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "sqlite3": "^4.1.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

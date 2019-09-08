@@ -1,9 +1,6 @@
 <div class="navbar-container">
   <div class="navbar-logo">
     <img src="../../assets/navbar/logo.jpg" alt="logo">
+    <button class="navbar-logout" *ngIf="show" (click)="logout()">Log Out</button>
   </div>
-  <ul class="navbar-items">
-    <li class="navbar-item"><a href="">About</a></li>
-    <li class="navbar-item"><a href="">Contact Us</a></li>
-  </ul>
 </div>

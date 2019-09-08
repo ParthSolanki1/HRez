@@ -1,0 +1,13 @@
+<app-navbar [show]="true"></app-navbar>
+<div class="dashboard">
+  <h1>Welcome, {{user.firstName}}&nbsp;{{user.lastName}}!</h1>
+  <p>HReasy is the home for all things related to employee managment. Our tools allow you to communicate with fellow employees, in order to increase communication within the team</p>
+  <div class="dashboard-button">
+    <button routerLink="/dashboard/create">Create Team</button>
+    <p>Click here if you are a manager and would like to create a team</p>
+  </div>
+  <div class="dashboard-button">
+    <button (click)="onClick()">View Teams</button>
+    <p>Click here to see your current teams</p>
+  </div>
+</div>

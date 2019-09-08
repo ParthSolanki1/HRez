@@ -1,0 +1,93 @@
+@import "../../styles.scss";
+
+.create {
+  width: 30%;
+  height: 520px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 7%;
+  padding: 40px;
+  color: $primary-text-color;
+
+  h1 {
+    font-family: "Ubuntu";
+    font-weight: 350;
+    font-size: 40px;
+  }
+
+  p {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tertiary-color;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  &-form {
+    font-family: "Ubuntu";
+    color: $primary-text-color;
+
+    input {
+      display: block;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 1px solid $primary-text-color;
+      width: 80%;
+      font-size: 17px;
+      outline: none;
+      padding-top: 5px;
+      transition: 0.3s;
+      background-color: $secondary-color;
+
+      &:focus {
+        border-bottom-color: $hover-color;
+      }
+    }
+
+    h1 {
+      margin: 5px 0 10px 0;
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    label {
+      display: inline-block;
+      margin-top: 20px; 
+    }
+
+    label:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    button {
+      float: right;
+      border: 1px solid $input-color;
+      padding: 15px;
+      cursor: pointer;
+      background-color: $tertiary-color;
+      color: $secondary-color;
+      font-family: "Ubuntu";
+      border-radius: 5px;
+      transition: 0.4s;
+
+      &:hover {
+        background-color: $hover-color;
+      }
+    }
+
+    .incorrect {
+      color: $hover-color;
+    }
+  }
+}

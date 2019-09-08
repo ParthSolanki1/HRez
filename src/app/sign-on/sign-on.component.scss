@@ -42,7 +42,7 @@
         & h1 {
             margin: 0;
             font-family: 'Ubuntu';
-            font-size: 50px;
+            font-size: 300%;
             font-weight: 400;
             color: $primary-text-color;
             padding-bottom: 8%;
@@ -116,4 +116,53 @@
         text-align: center;
         margin-top: 3%;
     }
+}
+
+.incorrect {
+    color: $hover-color !important;
+}
+
+@include respond-to($size:1200px){
+    .sign-on-message {
+        font-size: 30px;
+    }
+
+    .sign-on-card {
+        width: 40%;
+    }
+}
+
+@include respond-to($size:900px){
+    .sign-on-card {
+        width: 50%;
+    }
+}
+
+@include respond-to($size:800px){
+    .sign-on-card {
+        width: 100%;
+        margin-left: 20%;
+        margin-right: 20%;
+        max-height: 350px;
+        margin-top: 10%;
+    }
+
+    .sign-on-message {
+        display: none;
+    }
+
+    .sign-on-form {
+        button{
+            padding: 10px;
+        }
+
+        a {
+            margin-left: calc(100% - 150px);
+        }
+    }
+
+    .sign-on-testement {
+        font-size: 40px;
+    }
+
 }

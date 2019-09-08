@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="sign-on">
   <div class="sign-on-banner">
     <div class="sign-on-message">
@@ -8,15 +9,18 @@
       <div class="sign-on-form">
         <h1>Sign In</h1>
         <div>
-          <label for="text">Username:</label>
-          <input type="text">
+          <label for="text">Username:&nbsp;</label>
+          <label for="text" class="incorrect" *ngIf="!userExists">Username does not exist</label>
+          <label for="text" class="incorrect" *ngIf="!verifyComplete">Please verify email</label>
+          <input type="text" [(ngModel)]="username">
         </div>
         <div>
-          <label for="text" type="password">Password:</label>
-          <input type="password">
+          <label for="text" type="password">Password:&nbsp;</label>
+          <label for="text" class="incorrect" *ngIf="passwordIncorrect">Password is incorrect</label>
+          <input type="password" [(ngModel)]="password">
         </div>
-        <button>Submit</button>
-        <a href="#">Register</a>
+        <button (click)="onSubmit()">Submit</button>
+        <a routerLink="/register">Register</a>
       </div>
     </div>
   </div>

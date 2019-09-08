@@ -1,0 +1,14 @@
+<app-navbar [show]="true"></app-navbar>
+<div class="create">
+  <a (click)="onClick()">Back to Message Room</a>
+  <h1>Create a Message</h1>
+  <p>Write a message for your team</p>
+  <div class="create-form">
+    <div class="create-form-entry">
+      <label for="">{{characters - message.length}} characters left</label>
+      <label for="" class="incorrect" *ngIf="emptyError">Cannot leave field empty</label>
+      <input type="text" [(ngModel)]="message">
+    </div>
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+</div>

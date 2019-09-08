@@ -1,0 +1,14 @@
+<app-navbar [show]="true"></app-navbar>
+
+<div class="chat">
+  <div style="height: 20px">
+    <a routerLink="/dashboard/view" style="float: left;">Back to Team Selection</a>
+    <a routerLink="/dashboard/load" style="margin-left: 0; margin-right:30%;float: right;">Refresh</a>
+  </div>
+  <h1>{{name}}</h1>
+  <div style="text-align: center">
+    <button routerLink="/dashboard/createMessage">Add Message</button>
+  </div>
+</div>
+
+<app-message *ngFor="let num of nums" [number]="num"></app-message>

@@ -1,0 +1,6 @@
+<app-navbar [show]="true"></app-navbar>
+
+<div class="view">
+  <a routerLink="/dashboard">Back to Dashboard</a>
+  <app-chat-cards *ngFor="let num of nums" [number]="num"></app-chat-cards>
+</div>

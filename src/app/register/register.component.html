@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="register">
+  <div class="register-div">
+    <div class="register-card">
+      <img src="../../assets/navbar/logo.jpg" alt="logo">
+      <div class="register-card-form">
+        <h1>Register Now</h1>
+        <label for="text" style="margin-top: 0">First Name:&nbsp;</label>
+        <label class="incorrect" style="margin-top: 0" *ngIf="firstNameError">{{EmptyError}}</label>
+        <input type="text" [(ngModel)]="firstName">
+        <label for="text">Last Name:&nbsp;</label>
+        <label class="incorrect" *ngIf="lastNameError">{{EmptyError}}</label>
+        <input type="text" [(ngModel)]="lastName">
+        <label for="text">Username:&nbsp;</label>
+        <label class="incorrect" *ngIf="UsernameUsedError">{{UsernameUsedErrorText}}</label>
+        <label class="incorrect" *ngIf="usernameError">{{EmptyError}}</label>
+        <input type="text" [(ngModel)]="username">
+        <label for="text">Email:&nbsp;</label>
+        <label class="incorrect" *ngIf="EmailUsedError">{{EmailUsedErrorText}}</label>
+        <label class="incorrect" *ngIf="emailError">{{EmptyError}}</label>
+        <label class="incorrect" *ngIf="atChecker">Email is not Valid</label>
+        <input type="text" [(ngModel)]="email">
+        <label for="text">Password:&nbsp;</label>
+        <label class="incorrect" *ngIf="passwordError">{{EmptyError}}</label>
+        <label class="incorrect" *ngIf="passwordLengthError">Password must be 8 characters</label>
+        <input type="password" [(ngModel)]="password">
+        <label for="text">Re-enter password:&nbsp;</label>
+        <label class="incorrect" *ngIf="PassordNotMatchingError">{{PassordNotMatchingErrorText}}</label>
+        <label class="incorrect" *ngIf="password2Error">{{EmptyError}}</label>
+        <input type="password" [(ngModel)]="password2">
+        <button type="submit" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

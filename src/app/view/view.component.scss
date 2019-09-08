@@ -1,0 +1,17 @@
+@import "../../styles.scss";
+
+.view {
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: $tertiary-color;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: calc(30% - 30px);
+
+    &:hover {
+      color: $hover-color;
+    }
+}
